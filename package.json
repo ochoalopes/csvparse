@@ -1,6 +1,6 @@
 {
   "name": "@ochoalopes/csvparse",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse CSV into JSON, Typescript or Text files",
   "files": [
     "lib/**/*"
