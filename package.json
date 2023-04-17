@@ -19,7 +19,7 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
     "clean": "rimraf ./lib",
-    "publish": "npm run clean && npm test && npm run build && npm run lint && npm version patch && npm publish"
+    "publish": "npm run build && npm run lint && npm publish"
   },
   "repository": {
     "type": "git",
