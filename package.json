@@ -1,6 +1,6 @@
 {
   "name": "@ochoalopes/csvparse",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parse CSV into JSON, Typescript or Text files",
   "files": [
     "lib/**/*"
@@ -19,7 +19,7 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
     "clean": "rimraf ./lib",
-    "publish": "npm run build && npm run lint && npm publish"
+    "publish-package": "npm run build && npm run lint && npm publish"
   },
   "repository": {
     "type": "git",
