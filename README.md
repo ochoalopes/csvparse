@@ -19,7 +19,7 @@ npm install @ochoalopes/csvparse
 
 Import the `CSVParse` class and create a new instance:
 
-```javascript
+```
 import { CSVParse } from '@ochoalopes/csvparse';
 
 const csvParse = new CSVParse();
@@ -27,7 +27,9 @@ const csvParse = new CSVParse();
 
 Then, call the parseToJson method:
 
+```
 csvParse.parseToJson(filePathToRead, filePathToWrite, fileHasHeader, encoding, delimiter, startFrom, stopAt, errorCallback);
+```
 
 ### Parameters
 
@@ -42,7 +44,7 @@ csvParse.parseToJson(filePathToRead, filePathToWrite, fileHasHeader, encoding, d
 
 Example:
 
-```javascript
+```
 csvParse.parseToJson('./data/input.csv', './data/output.json', true, 'utf-8', ',', 1, 100, (error) => {
   console.error('Error occurred:', error.message);
 });

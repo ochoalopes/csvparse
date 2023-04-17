@@ -2,6 +2,7 @@ import fs from 'fs';
 import { CSVParse } from '..';
 import path from 'path';
 
+
 describe('CSVParse', () => {
   const csvParse = new CSVParse();
 
@@ -10,8 +11,13 @@ describe('CSVParse', () => {
   });
 
   test('parseToJson - basic functionality', async () => {
-    const testInputFilePath = path.join(__dirname, 'data', 'test-input.csv');
-    const testOutputFilePath = path.join(__dirname, 'data', 'test-output.json');
+    const dataDirPath = path.join(__dirname, '..', '__tests__/data');
+    if (!fs.existsSync(dataDirPath)) {
+      fs.mkdirSync(dataDirPath);
+    }
+
+    const testInputFilePath = path.join(__dirname, '..', '__tests__/data', 'test-input.csv');
+    const testOutputFilePath = path.join(__dirname, '..', '__tests__/data', 'test-output.json');
 
     fs.writeFileSync(testInputFilePath, 'header1|header2\nvalue1|value2\nvalue3|value4', 'utf-8');
 
@@ -28,8 +34,13 @@ describe('CSVParse', () => {
   });
 
   test('parseToJson - error handling', async () => {
-    const invalidInputFilePath = path.join(__dirname, 'data', 'nonexistent.csv');
-    const testOutputFilePath = path.join(__dirname, 'data', 'test-output.json');
+    const dataDirPath = path.join(__dirname, '..', '__tests__/data');
+    if (!fs.existsSync(dataDirPath)) {
+      fs.mkdirSync(dataDirPath);
+    }
+
+    const invalidInputFilePath = path.join(__dirname, '..', '__tests__/data', 'nonexistent.csv');
+    const testOutputFilePath = path.join(__dirname, '..', '__tests__/data', 'test-output.json');
 
     const errorCallback = jest.fn((err: Error) => {});
 
