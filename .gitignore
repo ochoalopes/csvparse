@@ -104,4 +104,10 @@ dist
 .tern-port
 
 #Typescript outpurDir
-build/
+lib/
+
+#VsCode
+.vscode/
+
+#DS_Store
+.DS_Store
